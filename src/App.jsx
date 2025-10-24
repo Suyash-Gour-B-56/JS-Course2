@@ -1,20 +1,21 @@
+// src/App.jsx
 // Author: Suyash Gour | Date: 25 October 2025
-import React from "react";
-import { Routes, Route, Navigate } from "react-router-dom";
-import LandingPage from "./pages/LandingPage";
-import ProductListing from "./pages/ProductListing";
-import CartPage from "./pages/CartPage";
-import Header from "./components/Header";
+import React from 'react';
+import Home from './pages/Home.jsx';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import About from './pages/About.jsx';
+import Contact from './pages/Contact.jsx';
 
-export default function App() {
+function App() {
   return (
-    <div>
+    <Router>
       <Routes>
-        <Route path='/' element={<LandingPage />} />
-        <Route path='/products' element={<><Header /><ProductListing /></>} />
-        <Route path='/cart' element={<><Header /><CartPage /></>} />
-        <Route path="*" element={<Navigate to="/" />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
-    </div>
+    </Router>
   );
 }
+
+export default App;
