@@ -5,5 +5,5 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: '/JS-Course2/' // needed for GitHub Pages
+  base: '/JS-Course2/' // Required for GitHub Pages deployment
 });
